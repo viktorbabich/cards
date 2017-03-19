@@ -1,0 +1,116 @@
+.half-container {
+	width: 50%;
+	float: left;
+}
+
+.card {
+	width: auto;
+	height: auto;
+	background: rgb(0,188,242);
+	margin: 40px;
+	padding: 20px;
+	position: relative;
+	font-size: 24px;
+	font-family: 'SegoeUi', Arial, sans-serif;
+	border: 4px dashed #000;
+}
+.card__inner {
+	padding: 20px;
+	margin: 20px;
+	background: rgb(255,255,255);
+	box-shadow: 2px 2px 0px 1px #000;
+
+}
+.buttonDelete {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: rgb(255, 0, 0);
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	transition: all 1s ease;
+}
+.buttonDelete:before {
+	width: 4px;
+	height: 24px;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 13px;
+	background: #fff;
+	transform: rotateZ(135deg);
+}
+.buttonDelete:after {
+	width: 4px;
+	height: 24px;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 13px;
+	background: #fff;
+	transform: rotateZ(45deg); 
+}
+.buttonDelete:active {
+	outline: none;
+	transform: scale(.9);
+}
+.buttonDelete:focus {
+	outline: none;
+}
+.buttonDelete:hover {
+	cursor: pointer;
+	transform: rotateZ(180deg) scale(1.5);
+}
+#addButton {
+	width: 100px;
+	height: 40px;
+	background: rgb(0,188,242); 
+	font-size: 20px;
+	font-family: 'SegoeUi', Arial, sans-serif;
+	border: none;
+	margin: 20px 0;
+	color: white;
+	user-select: none;
+	box-shadow: 2px 2px 0px 1px rgba(0,0,0, .7);
+}
+#addButton:active {
+	outline: none;
+	transform: translateY(2px);
+}
+#addButton:focus {
+	outline: none;
+}
+#addButton:hover {
+	cursor: pointer;
+}
+input::-webkit-input-placeholder {
+	padding-left: 10px;
+	font-size: 20px;
+}
+input:-moz-placeholder {
+	padding-left: 10px;
+}
+.data__input {
+	min-width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	font-size: 20px;
+	padding-left: 10px;
+}
+.data__inner p {
+	font-size: 20px;
+}
+.data {
+	margin: 40px;
+}
+#info {
+	width: 200px;
+	margin: 40px;
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+}
