@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="public/cards/styles.css">
 </head>
 <body>
 <div class="half-container">
 	<div id="info">Проверка данных...</div>
-	<div class="data">
+	<div class="data" id="cardForm">
 		<div class="data__inner">
 			<p>Имя</p>
 			<input type="text" name="name" id="name" class="data__input" placeholder="введите имя">  
@@ -20,7 +20,15 @@
 		<div class="data__inner">
 			<p>Компания</p>
 			<input type="text" name="company" id="company" class="data__input" placeholder="ваша организация">
+		</div>
+		<div class="data__inner">
+			<p>Телефон</p>
+			<input type="text" name="phone" id="company" class="data__input" placeholder="введите телефон">
 		</div>		
+		<div class="data__inner">
+			<p>E-mail</p>
+			<input type="text" name="email" id="company" class="data__input" placeholder="введите почту">
+		</div>				
 		<div class="data__inner">
 			<button id="addButton">Создать</button>
 		</div>
