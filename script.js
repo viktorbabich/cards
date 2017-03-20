@@ -1,13 +1,13 @@
 var container = document.getElementById('container');
 var button = document.getElementById('addButton');
 
-
+var storageList = localStorage.getItem('list');
 
 function User(data) {
 	if (!data) { data = {}}
 	var self = this;
-	this.name = data.name;
-	this.id = Date.now();
+	this.name = data.name || 'Имя не задано';
+	this.id = data.id ? data.id : Date.now();
 }
 
 var app = {
@@ -15,7 +15,7 @@ var app = {
 	addUser: function(data) {
 		var div, user, template;
 
-		user = new User(data)
+		user = new User(data);
 		app.list.push(user);
 		
 		template = [
@@ -23,6 +23,7 @@ var app = {
 				'<div class="item__name">' + user.name + '</div>',
 			'</div>'
 		].join("");
+
 
 		div = document.createElement('div');
 		div.className = 'item';
@@ -43,8 +44,7 @@ var app = {
 		// 
 	},
 	saveList: function() {
-		var list = [];
-		localStorage.setItem('list', list)
+		localStorage.setItem('list', JSON.stringify(app.list))
 	},
 	removeList: function() {
 		localStorage.removeItem('list')
@@ -58,3 +58,14 @@ var app = {
 }
 
 button.addEventListener('click', app.addUser);
+
+if(storageList && storageList.length > 0) {
+	var list = JSON.parse(storageList);
+
+	list.forEach(function(n, k) {
+
+		console.log(n)
+
+		app.addUser(n)
+	})
+}	
